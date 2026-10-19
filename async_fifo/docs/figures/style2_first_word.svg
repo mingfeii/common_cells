@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="555" viewBox="0 0 1100 555">
+<rect width="1100" height="555" fill="#f8fafc"/>
+<style>text{font-family:Microsoft YaHei,Arial,sans-serif;fill:#172b45}.small{font-size:12px}.label{font-size:14px}</style>
+<text x="30" y="34" font-size="21" font-weight="bold">Style #2 · 第一项数据从写入到读出</text>
+<text x="30" y="61" class="label">实际 Questa RTL 波形；深度 16，8 位数据；写周期 6 ns，读周期 10 ns</text>
+<path d="M 231.79 105 V 465" stroke="#e0e6ee"/>
+<text x="231.79" y="487" class="small" text-anchor="middle">250</text>
+<path d="M 320.05 105 V 465" stroke="#e0e6ee"/>
+<text x="320.05" y="487" class="small" text-anchor="middle">260</text>
+<path d="M 408.32 105 V 465" stroke="#e0e6ee"/>
+<text x="408.32" y="487" class="small" text-anchor="middle">270</text>
+<path d="M 496.58 105 V 465" stroke="#e0e6ee"/>
+<text x="496.58" y="487" class="small" text-anchor="middle">280</text>
+<path d="M 584.85 105 V 465" stroke="#e0e6ee"/>
+<text x="584.85" y="487" class="small" text-anchor="middle">290</text>
+<path d="M 673.11 105 V 465" stroke="#e0e6ee"/>
+<text x="673.11" y="487" class="small" text-anchor="middle">300</text>
+<path d="M 761.38 105 V 465" stroke="#e0e6ee"/>
+<text x="761.38" y="487" class="small" text-anchor="middle">310</text>
+<path d="M 849.64 105 V 465" stroke="#e0e6ee"/>
+<text x="849.64" y="487" class="small" text-anchor="middle">320</text>
+<path d="M 937.91 105 V 465" stroke="#e0e6ee"/>
+<text x="937.91" y="487" class="small" text-anchor="middle">330</text>
+<path d="M 1026.17 105 V 465" stroke="#e0e6ee"/>
+<text x="1026.17" y="487" class="small" text-anchor="middle">340</text>
+<text x="25" y="124" class="label">wclk</text>
+<text x="25" y="141" class="small">写时钟</text>
+<path d="M 170.00 110 V 110 H 196.48 V 132 H 222.96 V 110 H 249.44 V 132 H 275.92 V 110 H 302.40 V 132 H 328.88 V 110 H 355.36 V 132 H 381.84 V 110 H 408.32 V 132 H 434.80 V 110 H 461.28 V 132 H 487.76 V 110 H 514.23 V 132 H 540.71 V 110 H 567.19 V 132 H 593.67 V 110 H 620.15 V 132 H 646.63 V 110 H 673.11 V 132 H 699.59 V 110 H 726.07 V 132 H 752.55 V 110 H 779.03 V 132 H 805.51 V 110 H 831.99 V 132 H 858.47 V 110 H 884.95 V 132 H 911.43 V 110 H 937.91 V 132 H 964.39 V 110 H 990.87 V 132 H 1017.35 V 110 H 1035.00" fill="none" stroke="#087f8c" stroke-width="2"/>
+<text x="25" y="171" class="label">winc</text>
+<text x="25" y="188" class="small">写请求</text>
+<path d="M 170.00 179 V 179 H 249.44 V 157 H 302.40 V 179 H 1035.00" fill="none" stroke="#087f8c" stroke-width="2"/>
+<text x="25" y="218" class="label">wfull</text>
+<text x="25" y="235" class="small">满标志</text>
+<path d="M 170.00 226 V 226 H 1035.00" fill="none" stroke="#087f8c" stroke-width="2"/>
+<text x="25" y="265" class="label">rclk</text>
+<text x="25" y="282" class="small">读时钟</text>
+<path d="M 170.00 273 V 273 H 196.48 V 251 H 240.61 V 273 H 284.74 V 251 H 328.88 V 273 H 373.01 V 251 H 417.14 V 273 H 461.28 V 251 H 505.41 V 273 H 549.54 V 251 H 593.67 V 273 H 637.81 V 251 H 681.94 V 273 H 726.07 V 251 H 770.20 V 273 H 814.34 V 251 H 858.47 V 273 H 902.60 V 251 H 946.73 V 273 H 990.87 V 251 H 1035.00" fill="none" stroke="#087f8c" stroke-width="2"/>
+<text x="25" y="312" class="label">rinc</text>
+<text x="25" y="329" class="small">读请求</text>
+<path d="M 170.00 298 V 298 H 240.61 V 320 H 858.47 V 298 H 1035.00" fill="none" stroke="#087f8c" stroke-width="2"/>
+<text x="25" y="359" class="label">rempty</text>
+<text x="25" y="376" class="small">空标志</text>
+<path d="M 170.00 345 V 345 H 373.01 V 367 H 902.60 V 345 H 1035.00" fill="none" stroke="#087f8c" stroke-width="2"/>
+<text x="25" y="406" class="label">occupancy</text>
+<text x="25" y="423" class="small">真实占用量</text>
+<path d="M 170.00 414 V 414 H 275.92 V 392 H 902.60 V 414 H 1035.00" fill="none" stroke="#9b3fba" stroke-width="2"/>
+<path d="M 275.92 107 V 458" stroke="#b55b08" stroke-dasharray="4 4"/>
+<text x="275.92" y="85" fill="#b55b08" class="small" text-anchor="middle">接受第 1 次写 255 ns</text>
+<path d="M 373.01 107 V 458" stroke="#7b3ab2" stroke-dasharray="4 4"/>
+<text x="373.01" y="100" fill="#7b3ab2" class="small" text-anchor="middle">解除空标志 266 ns</text>
+<path d="M 902.60 107 V 458" stroke="#1f6d3c" stroke-dasharray="4 4"/>
+<text x="902.60" y="85" fill="#1f6d3c" class="small" text-anchor="middle">接受第 1 次读 326 ns</text>
+<text x="1035" y="510" class="small" text-anchor="end">时间 / ns</text>
+<text x="30" y="536" class="label">读请求由测试场景稍后发出；标志解除与实际消费是两个不同事件。0 / 1 分别画在每行低 / 高位置。</text>
+</svg>

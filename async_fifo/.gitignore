@@ -1,0 +1,6 @@
+sim/build/
+tmp/
+__pycache__/
+transcript
+vsim.wlf
+modelsim.ini
