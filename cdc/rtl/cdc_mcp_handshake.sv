@@ -5,24 +5,48 @@ module cdc_mcp_handshake #(
   parameter integer WIDTH = 8,
   parameter integer STAGES = 2
 ) (
-  input wire src_clk, src_rst_n,
+  input wire                 src_clk,
+  input wire                 src_rst_n,
   input wire [WIDTH-1:0] src_data,
-  input wire src_valid,
-  output wire src_ready,
-  input wire dst_clk, dst_rst_n,
+  input wire                 src_valid,
+  output wire                src_ready,
+  input wire                 dst_clk,
+  input wire                 dst_rst_n,
   output reg [WIDTH-1:0] dst_data,
-  output reg dst_valid,
+  output reg                 dst_valid,
   input wire dst_ready
 );
+
   reg [WIDTH-1:0] hold_data;
-  reg req, ack;
+
+  reg req;
+  reg ack;
+
   wire req_sync, ack_sync;
-  cdc_sync_bits #(.WIDTH(1), .STAGES(STAGES)) u_req (
-    .dst_clk(dst_clk), .dst_rst_n(dst_rst_n), .async_i(req), .sync_o(req_sync));
-  cdc_sync_bits #(.WIDTH(1), .STAGES(STAGES)) u_ack (
-    .dst_clk(src_clk), .dst_rst_n(src_rst_n), .async_i(ack), .sync_o(ack_sync));
+
+  cdc_sync_bits #(
+    .WIDTH(1),
+    .STAGES(STAGES)
+  ) u_req (
+    .dst_clk  (dst_clk),
+    .dst_rst_n(dst_rst_n),
+    .async_i  (req),
+    .sync_o   (req_sync)
+  );
+
+  cdc_sync_bits #(
+    .WIDTH(1),
+    .STAGES(STAGES)
+  ) u_ack (
+    .dst_clk  (src_clk),
+    .dst_rst_n(src_rst_n),
+    .async_i  (ack),
+    .sync_o   (ack_sync)
+  );
+
   assign src_ready = src_rst_n && (req == ack_sync);
-  always @(posedge src_clk or negedge src_rst_n)
+
+  always @(posedge src_clk or negedge src_rst_n) begin
     if (!src_rst_n) begin
       hold_data <= '0;
       req <= 1'b0;
@@ -30,7 +54,9 @@ module cdc_mcp_handshake #(
       hold_data <= src_data;
       req <= ~req;
     end
-  always @(posedge dst_clk or negedge dst_rst_n)
+  end
+
+  always @(posedge dst_clk or negedge dst_rst_n) begin
     if (!dst_rst_n) begin
       dst_data <= '0;
       dst_valid <= 1'b0;
@@ -44,7 +70,14 @@ module cdc_mcp_handshake #(
       dst_data <= hold_data;
       dst_valid <= 1'b1;
     end
+  end
+
   // synthesis translate_off
-  initial if (WIDTH < 1) $fatal(1, "WIDTH must be >= 1");
+  initial begin
+    if (WIDTH < 1) begin
+      $fatal(1, "WIDTH must be >= 1");
+    end
+  end
+
   // synthesis translate_on
 endmodule
